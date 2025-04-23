@@ -1,8 +1,13 @@
-// src/app/page.js
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function Home() {
-  return (
-    <main className="flex justify-center items-center h-screen">
-      <h1 className="text-3xl font-bold">Seat Booking App</h1>
-    </main>
-  );
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/signup') 
+  }, [router])
+
+  return null
 }
